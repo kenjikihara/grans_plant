@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/index'
   root 'static_pages#index'
+  resources :posts
 end
