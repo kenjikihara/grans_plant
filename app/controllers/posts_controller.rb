@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   def index
-    puts "a"
   end
   
   def new
