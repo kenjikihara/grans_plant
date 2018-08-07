@@ -1,0 +1,20 @@
+<%= form_with(model: @post, local: true) do |form| %>
+  <div class="post_gransname">
+    <%= form.label :grans_name %>
+    <%= form.text_field :grans_name %>
+  </div>
+  <div class="post_gransimage">
+    <%= form.label :grans_image %>
+    <%= form.text_field :grans_image %>
+  </div>
+  <div class="post_plantname">
+    <%= form.label :plants_name %>
+    <%= form.text_field :plants_name %>
+  </div>
+  <div class="post_plantname">
+    <%= form.label :plants_image %>
+    <%= form.text_field :plants_image %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
