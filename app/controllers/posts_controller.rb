@@ -23,9 +23,10 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
-    
-    
-    
+  end
+
+  def edit
+    @blog = Blog.find(params[:id])
   end
   
   def update
