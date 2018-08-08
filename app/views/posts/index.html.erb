@@ -1,2 +1,13 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% @posts.each do |post| %>
+  <div class="post-panel grid-item">
+    <div class="post-contents" ontouchstart="" > 
+      <li><%= post.grans_name %></li>
+      <li><%= post.grans_image %></li>
+      <li><%= post.plants_name %></li>
+      <li><%= post.plants_image %></li>
+    <% if post.transfer_complete == true %>
+      <li class="complete_message alert alert-info">test</li>
+    <% end %>
+    </div>
+  </div>
+<% end %>
