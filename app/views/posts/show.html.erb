@@ -4,7 +4,7 @@
       <li><%= @post.plants_name %></li>
       <li><%= @post.plants_image %></li>
       <li><%= link_to "編集する", edit_post_path(@post.id) %></li>
-      
+      <li><%= link_to '削除する', post_path(@post.id), method: :delete, data: { confirm: '削除していいですか？' } %></li>
     <% if @post.transfer_complete == true %>
       <li class="complete_message alert alert-info">test</li>
     <% end %>
