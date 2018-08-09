@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     end
   end
   
+  def confirm
+    @post = Post.new(post_params)
+  end
+  
   def show
   end
   
