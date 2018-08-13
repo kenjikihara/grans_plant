@@ -19,6 +19,10 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
 
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
