@@ -51,7 +51,8 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:grans_name, :grans_image, :plants_name, :plants_image, :transfer_complete, :image_cache)
+    params.require(:post).permit(:grans_name, :grans_image, :plants_name, :plants_image, 
+                                 :transfer_complete, :grans_image_cache, :plants_image_cache)
   end
   
   def set_post
