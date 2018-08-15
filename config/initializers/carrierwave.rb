@@ -1,5 +1,5 @@
 CarrierWave.configure do |config|
-  config.fog_provider = 'fog-aws'
+  config.fog_provider = 'fog/aws'
   config.fog_credentials = {
       provider:              'AWS',
       aws_access_key_id:     ENV["AWS_ACCESS_KEY_ID"],
@@ -13,10 +13,10 @@ CarrierWave.configure do |config|
 
   case Rails.env
     when 'production'
-      config.fog_directory = '本番環境用のバケット名'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/本番環境用のバケット名'
+      config.fog_directory = 'gransplant-production'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/gransplant-production'
     when 'development'
-      config.fog_directory = '開発環境用のバケット名'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/開発環境用のバケット名'
+      config.fog_directory = 'gransplant-development'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/gransplant-development'
   end
 end
