@@ -1,22 +1,21 @@
 <h3>以下の内容で、送信する。</h3>
 
 <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
-  <%= form.hidden_field :grans_name %>
-  <%= form.hidden_field :grans_image %>
-  <%= form.hidden_field :plants_name %>
-  <%= form.hidden_field :plants_image %>
-
   <p>名前:<%= @post.grans_name %></p>
-  <p>画像:<%= @post.grans_image %></p>
+  <%= form.hidden_field :grans_name %>
+  <p>画像:<%= image_tag(@post.grans_image.url) %></p>
+  <%= form.hidden_field :grans_image_cache %>
   <p>植物の名前:<%= @post.plants_name %></p>
-  <p>画像:<%= @post.plants_image %></p>
+  <%= form.hidden_field :plants_name %>
+  <p>画像:<%= image_tag(@post.plants_image.url) %></p>
+  <%= form.hidden_field :plants_image_cache %>
   <%= form.submit  "登録する" %>
 <% end %>
 
 <%= form_with(model: @post, url: new_post_path, local: true, method: 'get') do |form| %>
   <%= form.hidden_field :grans_name %>
-  <%= form.hidden_field :grans_image %>
+  <%= form.hidden_field :grans_image_cache %>
   <%= form.hidden_field :plants_name %>
-  <%= form.hidden_field :plants_image %>
+  <%= form.hidden_field :plants_image_cache %>
   <%= form.submit "もどる" %>
 <% end %>

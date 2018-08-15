@@ -17,7 +17,8 @@
   </div>
   <div class="post_gransimage">
     <%= form.label :grans_image %>
-    <%= form.text_field :grans_image %>
+    <%= image_tag(@post.grans_image) if @post.grans_image.url %>
+    <%= form.file_field :grans_image %>
   </div>
   <div class="post_plantname">
     <%= form.label :plants_name %>
@@ -25,7 +26,8 @@
   </div>
   <div class="post_plantname">
     <%= form.label :plants_image %>
-    <%= form.text_field :plants_image %>
+    <%= image_tag(@post.prants_image) if @post.plants_image.url %>
+    <%= form.file_field :plants_image %>
   </div>
 
   <%= form.submit %>
